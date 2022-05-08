@@ -6,8 +6,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Amuuuuuuuu',
-  tagline: `嗨嗨我是Amu，目前走在前端路上${new Date().getFullYear() - new Date('2018').getFullYear()}年，這記錄了開發也會分享些日常。`,
+  title: 'Bill',
+  tagline: `嗨嗨我是Bill，目前走在前端路上${new Date().getFullYear() - new Date('2018').getFullYear()}年，這記錄了開發也會分享些日常。`,
   url: 'https://akakaki.github.io',
   baseUrl: '/',
   onBrokenLinks: 'throw',
@@ -117,7 +117,7 @@ const config = {
         //     ],
         //   },
         // ],
-        copyright: `Copyright © ${new Date().getFullYear()} Amu, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Bill, Inc. Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,

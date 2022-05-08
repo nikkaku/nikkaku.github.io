@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 set -e
 rm -rf build
-yarn build
+npm run build
 cd build
 git init
 git checkout -b master

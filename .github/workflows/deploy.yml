@@ -11,7 +11,7 @@ jobs:
 
     env:
       MY_SECRET   : ${{secrets.commit}}
-      USER_NAME   : botAmu
+      USER_NAME   : bot
       USER_EMAIL  : samakryi@gmail.com
       PUBLISH_DIR  : build
 
