@@ -1,0 +1,16 @@
+<div class="date">
+  <p>
+    <i class="fa-regular fa-calendar-days"></i>
+    <span>發表於</span>
+    <span>
+      <%- new Date(page.date).getFullYear() %>-<%- (new Date(page.date).getMonth() + 1).toString().padStart(2, 0) %>-<%- new Date(page.date).getDate() %>
+    </span>
+  </p>
+  <p>
+    <i class="fa-regular fa-calendar-check"></i>
+    <span>更新於</span>
+    <span>
+      <%- new Date(page.updated).getFullYear() %>-<%- (new Date(page.updated).getMonth() + 1).toString().padStart(2, 0) %>-<%- new Date(page.updated).getDate() %>
+    </span>
+  </p>
+</div>

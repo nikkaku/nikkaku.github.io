@@ -1,0 +1,17 @@
+<section class="item__container">
+  <h2>
+    <a class="item__title" href="/<%- item.path %>"><%- item.title %></a>
+  </h2>
+  <% if (item.excerpt) { %>
+    <span><%- item.excerpt %></span>
+  <% } else { %>
+    <span><%- item.content %></span>
+  <% } %>
+  <div class="more">
+    <%- partial('partial/date', { page: item })%>
+    <a class="more__text" href="/<%- item.path %>">
+      <span>閱讀全文</span>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+  </div>
+</section>
