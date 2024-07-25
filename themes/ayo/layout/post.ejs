@@ -1,0 +1,30 @@
+<h1 class="post__title"><%- page.title %></h1>
+<div class="post__data">
+  <%- partial('partial/date', { page })%>
+  <div class="post__tags">
+    <% if (page.tags.length) { %>
+      <i class="fa-solid fa-tags"></i>
+      <% page.tags.each(function(item, index) { %>
+        <a href="/<%- item.path %>"><%- item.name %></a><% if (page.tags.length - 1 !== index) { %>,<% } %>
+      <% }) %>
+    <% } %>
+  </div>
+</div>
+
+<article><%- page.content %></article>
+
+<div class="post__move">
+  <% if (page.prev) { %>
+    <a class="post__move__prev" href="/<%- page.prev.path %>">
+      <i class="fa-solid fa-angle-left"></i>
+      <%- page.prev.title %>
+    </a>
+  <% } %>
+  <% if (page.next) { %>
+    <a class="post__move__next" href="/<%- page.next.path %>">
+      <%- page.next.title %>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+  <% } %>
+</div>
+

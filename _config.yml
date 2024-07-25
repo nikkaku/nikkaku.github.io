@@ -3,7 +3,7 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 開發雜記
+title: 筆記
 subtitle: ''
 description: ''
 keywords:
@@ -13,6 +13,7 @@ timezone: ''
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
+site: https://github.com/akakaki
 url: https://akakaki.github.io
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -97,7 +98,7 @@ ignore:
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 # theme: landscape
-theme: next
+theme: ayo
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment

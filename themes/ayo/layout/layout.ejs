@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/images/favicon.png">
+  <title>
+    <% if (page.title) { %>
+      <%- page.title %> - 
+    <% } else if (page.tag) { %>
+      <%- page.tag %> - 
+    <% } else if (page.category) { %>
+      <%- page.category %> - 
+    <% } else if (page.archive) { %>
+      歸檔 -
+    <% } %>
+    <%- config.title %>
+  </title>
+
+  <meta name="theme-color" content="#222">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="<%- config.title %>">
+  <meta property="og:url" content="<%- config.url %>">
+  <meta property="og:site_name" content="<%- page.title %>">
+  <meta property="og:locale" content="<%- config.language %>">
+  <meta property="article:author" content="<%- config.author %>">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+  <link href="/fontawesome-free-6.6.0-web/css/fontawesome.css" rel="stylesheet" />
+  <link href="/fontawesome-free-6.6.0-web/css/solid.css" rel="stylesheet" />
+  <link href="/fontawesome-free-6.6.0-web/css/brands.css" rel="stylesheet" />
+  <link href="/fontawesome-free-6.6.0-web/css/regular.css" rel="stylesheet" />
+</head>
+<body>
+  <%- partial('partial/header')%>
+  <main>
+    <section class="banner"></section>
+    <section class="container">
+      <%- body %>
+    </section>
+  </main>
+  <%- partial('partial/footer')%>
+</body>
+</html>

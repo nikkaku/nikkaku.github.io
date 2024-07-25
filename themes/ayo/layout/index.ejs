@@ -1,0 +1,14 @@
+<% page.posts.each(function(item) { %>
+  <%- partial('partial/item', { item })%>
+<% }) %>
+<div class="page">
+  <a class="page__prev<% if (!page.prev) { %> disabled<% } %>" <% if (page.prev) { %>href="/<%- page.prev_link %>"<% } %>>
+    <i class="fa-solid fa-angle-left"></i>
+    <span>上一頁</span>
+  </a>
+  <span>目前在第 <%- page.current %> 頁，共 <%- page.total %> 頁</span>
+  <a class="page__next<% if (!page.next) { %> disabled<% } %>" <% if (page.next) { %>href="/<%- page.next_link %>"<% } %>>
+    <span>下一頁</span>
+    <i class="fa-solid fa-angle-right"></i>
+  </a>
+</div>
