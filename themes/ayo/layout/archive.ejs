@@ -1,3 +1,8 @@
-<h1>this is archive</h1>
-<div>== <%- page.month %> ==</div>
-
+<div class="archive__container">
+  <% page.posts.sort('date', 'desc').each(function(item) { %>
+      <a href="/<%- item.path %>">
+        <%- date(item.date, 'YYYY-MM-DD') %>
+        <%- item.title %>
+      </a>
+  <% }) %>
+</div>

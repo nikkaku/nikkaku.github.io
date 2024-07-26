@@ -1,4 +1,4 @@
-<% page.posts.each(function(item) { %>
+<% page.posts.sort('date', 'desc').each(function(item) { %>
   <%- partial('partial/item', { item })%>
 <% }) %>
 <div class="page">
