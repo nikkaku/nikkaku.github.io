@@ -1,4 +1,4 @@
-<% site.posts.each(function(item) { %>
+<% site.posts.sort('date', 'desc').each(function(item) { %>
   <% if (item.tags.map(sub => sub.name).includes(page.tag)) { %>
     <%- partial('partial/item', { item })%>
   <% } %>

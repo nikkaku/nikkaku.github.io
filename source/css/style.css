@@ -155,3 +155,45 @@ footer {
   text-align: center;
   padding: 14px 0;
 }
+
+/* archive */
+.archive__container {
+  display: inline-flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+.highlight.js {
+  margin : 20px 0;
+  padding: 10px;
+  background: #3c3c3c;
+  color: #fff;
+
+  pre {
+    margin: 0;
+    line-height: 2;
+  }
+
+  .gutter {
+    user-select: none;
+    padding-right: 10px;
+    color: #626262;
+    font-style: italic;
+  }
+
+  .keyword {
+    color: #00aaff;
+  }
+
+  .title.class_ {
+    color: #00ce9e;
+  }
+
+  .title.function_ {
+    color: #51a700;
+  }
+
+  .number {
+    color: #f8f000;
+  }
+}

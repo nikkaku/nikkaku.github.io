@@ -3,14 +3,16 @@
     <i class="fa-regular fa-calendar-days"></i>
     <span>發表於</span>
     <span>
-      <%- new Date(page.date).getFullYear() %>-<%- (new Date(page.date).getMonth() + 1).toString().padStart(2, 0) %>-<%- new Date(page.date).getDate() %>
+      <%- date(page.date, 'YYYY-MM-DD') %>
     </span>
   </p>
-  <p>
-    <i class="fa-regular fa-calendar-check"></i>
-    <span>更新於</span>
-    <span>
-      <%- new Date(page.updated).getFullYear() %>-<%- (new Date(page.updated).getMonth() + 1).toString().padStart(2, 0) %>-<%- new Date(page.updated).getDate() %>
-    </span>
-  </p>
+  <% if ( Number(page.date) !== Number(page.updated)) { %>
+    <p>
+      <i class="fa-regular fa-calendar-check"></i>
+      <span>更新於</span>
+      <span>
+        <%- date(page.updated, 'YYYY-MM-DD') %>
+      </span>
+    </p>
+  <% } %>
 </div>
