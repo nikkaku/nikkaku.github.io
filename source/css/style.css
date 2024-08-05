@@ -176,6 +176,24 @@ footer {
   row-gap: 10px;
 }
 
+/* code filename */
+h4 {
+  margin-bottom: 0;
+  padding: 0;
+
+  strong code {
+    background: #333;
+    padding: 4px 8px;
+    color: #fff;
+    font-weight: normal;
+    font-size: 12px;
+  }
+
+  & + figure.highlight {
+    margin-top: 0;
+  }
+}
+
 .highlight {
   margin : 20px 0;
   padding: 10px;
