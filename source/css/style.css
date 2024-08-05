@@ -1,15 +1,15 @@
-* {
-  font-family: Noto Sans Mono, Noto Sans TC, 'PingFang SC', 'Microsoft YaHei', sans-serif;
-}
-
 :root {
   --container__width: 1024px;
 }
 
-body {
+* {
+  font-family: Noto Sans Mono, Noto Sans TC, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+}
+
+html, body {
+  font-size: 16px;
   margin: 0;
   padding: 0;
-  font-size: 16px;
   color: #333;
 }
 
@@ -24,10 +24,34 @@ p {
 a {
   color: #333;
   text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
-a:hover {
-  text-decoration: underline;
+h1 {
+  font-size: 1.6rem;
+}
+
+h2 {
+  font-size: 1.4rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+}
+
+h4 {
+  font-size: 1rem;
+}
+
+h5 {
+  font-size: .8rem;
+}
+
+h6 {
+  font-size: .6rem;
 }
 
 table {
@@ -226,5 +250,9 @@ h4 {
 
   .number {
     color: #f8f000;
+  }
+
+  .commit {
+    color: #5e5e5e;
   }
 }
