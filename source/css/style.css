@@ -201,7 +201,7 @@ footer {
 }
 
 /* code filename */
-h4 {
+h4:has( + figure) {
   margin-bottom: 0;
   padding: 0;
 
