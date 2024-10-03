@@ -1,4 +1,4 @@
-# akakaki.github.io
+# nikkaku.github.io
 
 # TODO
 - [ ] 更改使用 npm 管理 fontawesome。
