@@ -17,6 +17,7 @@ const { page }: { page: Page } = Astro.props
 const { data, currentPage, lastPage } = page
 
 // redirect page number 1 to index
+// TODO: 效果不好 。・゜・(ノД`)・゜・。
 if (currentPage === 1) return Astro.redirect('/')
 ---
 
