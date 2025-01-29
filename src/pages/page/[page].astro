@@ -8,6 +8,7 @@ import BlogList from '@/layouts/BlogList.astro';
 
 export const getStaticPaths = async ({ paginate } : GetStaticPathsOptions) => {
   const posts = (await getCollection('blog'))
+    .map((item) => ({ ...item, data: { ...item.data, pubDate: new Date(item.data.pubDate || item.data.date || '') } }))
     .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
   return paginate(posts, { pageSize: SITE_PAGINATION })
 }

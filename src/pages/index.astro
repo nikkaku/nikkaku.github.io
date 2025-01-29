@@ -3,9 +3,9 @@ import { getCollection } from 'astro:content';
 import BlogList from '@/layouts/BlogList.astro';
 import { SITE_PAGINATION } from '@/consts'
 
-const posts = (await getCollection('blog')).sort(
-	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
-);
+const posts = (await getCollection('blog'))
+	.map((item) => ({ ...item, data: { ...item.data, pubDate: new Date(item.data.pubDate || item.data.date || '') } }))
+	.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
 const data = posts.slice(0, SITE_PAGINATION)
 const currentPage = 1
