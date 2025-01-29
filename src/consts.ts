@@ -4,3 +4,5 @@
 export const SITE_TITLE = '悠遊撰寫';
 export const SITE_DESCRIPTION = '寫自己想寫的做自己想做的';
 export const SITE_USER = 'nikkaku'
+export const SITE_PROJECT = 'nikkaku.github.io'
+export const SITE_PAGINATION = 6

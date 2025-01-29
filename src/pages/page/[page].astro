@@ -1,0 +1,22 @@
+---
+
+import type { GetStaticPathsOptions, Page } from 'astro'
+import { getCollection } from 'astro:content';
+import { SITE_PAGINATION } from '@/consts'
+
+import BlogList from '@/layouts/BlogList.astro';
+
+export const getStaticPaths = async ({ paginate } : GetStaticPathsOptions) => {
+  const posts = (await getCollection('blog'))
+    .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+  return paginate(posts, { pageSize: SITE_PAGINATION })
+}
+
+const { page }: { page: Page } = Astro.props
+const { data, currentPage, lastPage } = page
+
+// redirect page number 1 to index
+if (currentPage === 1) return Astro.redirect('/')
+---
+
+<BlogList posts={ data } currentPage={ currentPage } lastPage={ lastPage } />
