@@ -27,14 +27,29 @@ const { posts, currentPage = 1, lastPage = 1 } = Astro.props
 				<ul class="flex flex-col gap-[20px]">
 					{
 						posts.map(post => (
-							<li>
+							<li class="mb-[40px]">
 								{/* <img class={ ` ${ index ? '!rounded-none' : '!mb-0 shrink-0 h-[400px] !w-[600px] object-cover' }` } src={post.data.heroImage} /> */}
-								<div class="p-[20px] m-0 text-left box-border">
-									<h2 class="p-0 mt-0 mx-0 mb-[12px] font-bold text-[1.563em]">{post.data.title}</h2>
-									<p class="p-0 m-0 line-clamp-2 text-[#000] text-[16px]">{ post.body }</p>
-									<div class="flex justify-between items-center">
-										<span class="text-[14px]">發表於 <FormattedDate date={post.data.pubDate} /></span>
-										<a class="text-[#333] hover:underline hover:text-[#333] text-[16px]" href={`/post/${post.id}/`}>閱讀全文</a>
+								<div class="m-0 text-left box-border">
+									<h2 class="p-0 mt-0 mx-0 font-bold text-[1.6rem] sm:text-[2rem]">{post.data.title}</h2>
+									<p class="p-0 m-0 leading-[2] line-clamp-2 text-[#333]">{ post.body }</p>
+									{
+										post.data.tags && (
+											<ul class="flex gap-x-[6px]">
+												{post.data.tags.map((item: string) => <li class="text-[#333] text-[14px]">#{item}</li>)}
+											</ul>
+										)
+									}
+									<div class="flex justify-between items-center mt-[12px] sm:mt-[20px] ">
+										<div class="flex items-center text-[14px] leading-none gap-x-[6px]">
+											<div>
+												<span class="sr-only">calendar icon</span>
+												<div class="w-[16px] h-[16px] bg-[#333]" style="mask: url('/icon/calendar.svg') no-repeat center center"></div>
+											</div>
+											<span class="leading-none">
+												<FormattedDate date={post.data.pubDate} />
+											</span>
+										</div>
+										<a class="text-[#333] hover:underline hover:text-[#333] text-[.9rem] sm:text-[1rem] leading-none" href={`/post/${post.id}/`}>閱讀全文</a>
 									</div>
 								</div>
 							</li>

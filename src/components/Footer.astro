@@ -10,7 +10,7 @@ const user = await response.json()
 <footer class="py-[10px] flex flex-col items-center text-[14px] text-[#333]">
 	<a href={`https://github.com/${SITE_USER}`} target="_blank">
 		<span class="sr-only">{ `Go to ${user.name}'s GitHub repo` }</span>
-		<div class="w-[20px] h-[20px] bg-[#333]" style="mask: url('/github.svg') no-repeat center center"></div>
+		<div class="w-[20px] h-[20px] bg-[#333]" style="mask: url('/icon/github.svg') no-repeat center center"></div>
 	</a>
 	&copy; {today.getFullYear()} { user.name } All rights reserved.
 </footer>

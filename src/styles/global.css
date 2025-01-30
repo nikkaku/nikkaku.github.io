@@ -36,7 +36,7 @@ body {
 
 main {
 	width: 760px;
-	max-width: calc(100% - 2em);
+	max-width: 100%;
 	margin: auto;
 	padding: 3em 1em;
 }
@@ -121,7 +121,7 @@ hr {
 }
 @media (max-width: 720px) {
 	body {
-		font-size: 18px;
+		font-size: 14px;
 	}
 	main {
 		padding: 1em;

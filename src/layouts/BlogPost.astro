@@ -1,69 +1,55 @@
 ---
 import type { CollectionEntry } from 'astro:content';
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import FormattedDate from '../components/FormattedDate.astro';
 import { SITE_TITLE } from '@/consts';
+
+import BaseHead from '@/components/BaseHead.astro';
+import Header from '@/components/Header.astro';
+import Footer from '@/components/Footer.astro';
+import FormattedDate from '@/components/FormattedDate.astro';
 
 type Props = CollectionEntry<'blog'>['data'];
 
-const { title, description, pubDate, date, updatedDate, heroImage } = Astro.props;
+const { title, description, pubDate, date, updatedDate, heroImage, tags } = Astro.props;
 ---
 
 <html lang="zh-Hant">
 	<head>
 		<BaseHead title={`${title} - ${SITE_TITLE}`} description={description || ''} />
-		<style>
-			.hero-image {
-				width: 100%;
-			}
-			.hero-image img {
-				display: block;
-				margin: 0 auto;
-				border-radius: 12px;
-				box-shadow: var(--box-shadow);
-			}
-			.title {
-				margin-bottom: 1em;
-				padding: 1em 0;
-				text-align: center;
-				line-height: 1;
-			}
-			.title h1 {
-				margin: 0 0 0.5em 0;
-			}
-			.date {
-				margin-bottom: 0.5em;
-				color: rgb(var(--gray));
-			}
-			.last-updated-on {
-				font-style: italic;
-			}
-		</style>
 	</head>
-
 	<body>
 		<Header />
 		<main>
 			<article>
-				<div class="hero-image">
+				<!-- <div class="hero-image">
 					{heroImage && <img width={1020} height={510} src={heroImage} alt="" />}
-				</div>
-				<div class="p-[1em]">
+				</div> -->
+				<div>
 					<div class="title">
-						<div class="date">
-							<FormattedDate date={ pubDate || date || '' } />
-							{
-								updatedDate && (
-									<div class="last-updated-on">
-										Last updated on <FormattedDate date={updatedDate} />
-									</div>
-								)
-							}
+						<h1 class="text-[1.6rem] sm:text-[1.8rem] font-bold">{title}</h1>
+						<div class="flex items-center text-[14px] leading-none gap-x-[6px] my-[12px]">
+							<div>
+								<span class="sr-only">calendar icon</span>
+								<div class="w-[16px] h-[16px] bg-[#333]" style="mask: url('/icon/calendar.svg') no-repeat center center"></div>
+							</div>
+							<span class="leading-none">
+								<FormattedDate date={ pubDate || date || new Date() } />
+								{
+									updatedDate && (
+										<div class="last-updated-on">
+											Last updated on <FormattedDate date={updatedDate} />
+										</div>
+									)
+								}
+							</span>
 						</div>
-						<h1 class="font-bold">{title}</h1>
-						<hr class="border-t-[#d1d0cd]"/>
+						{
+							tags && (
+								<ul class="flex gap-x-[6px]">
+									{tags.map((item: string) => <li class="text-[#333] text-[14px]">#{item}</li>)}
+								</ul>
+							)
+						}
+						<hr class="border-t-[#d1d0cd] my-[1rem]"/>
 					</div>
 					<slot />
 				</div>
