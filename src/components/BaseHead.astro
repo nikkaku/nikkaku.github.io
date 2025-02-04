@@ -50,6 +50,9 @@ const { title, description, image = '/blog-placeholder-1.jpg' } = Astro.props;
 <meta property="twitter:description" content={description || SITE_DESCRIPTION} />
 <meta property="twitter:image" content={new URL(image, Astro.url)} />
 
+<!-- Sitemap XML -->
+<link rel="sitemap" href="/sitemap-index.xml" />
+
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-ECL9QH741Z"></script>
 <script>
