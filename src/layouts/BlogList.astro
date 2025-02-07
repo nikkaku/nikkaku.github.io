@@ -49,7 +49,7 @@ const { posts, currentPage = 1, lastPage = 1 } = Astro.props
 												<FormattedDate date={post.data.pubDate} />
 											</span>
 										</div>
-										<a class="text-[#333] hover:underline hover:text-[#333] text-[.9rem] sm:text-[1rem] leading-none" href={`/post/${post.id}/`}>閱讀全文</a>
+										<a class="text-[.9rem] sm:text-[1rem] leading-none" href={`/post/${post.id}/`}>閱讀全文</a>
 									</div>
 								</div>
 							</li>
@@ -61,15 +61,15 @@ const { posts, currentPage = 1, lastPage = 1 } = Astro.props
 				<ul class="flex justify-center gap-[12px]">
 					<li>
 						<a
-							class={ `text-[#333] ${ currentPage <= 1 ? 'pointer-events-none': 'hover:underline hover:text-[#333]' }` }
+							class={ `text-[#333] ${ currentPage <= 1 ? 'pointer-events-none': '' }` }
 							href={ currentPage - 1 === 1 ? '/' : `/page/${currentPage - 1}` }>prev</a>
 					</li>
 					{
 						Array.from({ length: lastPage }).map((_item, index) => (
-							<li class="w-[20px] text-center" ><a class={ `text-[#333] ${ currentPage - 1 === index ? 'font-bold pointer-events-none': 'hover:underline hover:text-[#333]' }`  } href={ index ? `/page/${index + 1}` : '/' }>{ index + 1 }</a></li>
+							<li class="w-[20px] text-center" ><a class={ `text-[#333] ${ currentPage - 1 === index ? 'font-bold pointer-events-none': '' }`  } href={ index ? `/page/${index + 1}` : '/' }>{ index + 1 }</a></li>
 						))
 					}
-					<li><a class={ `text-[#333] ${ currentPage >= lastPage ? 'pointer-events-none': 'hover:underline hover:text-[#333]' }` } href={ `/page/${currentPage + 1}` }>next</a></li>
+					<li><a class={ `text-[#333] ${ currentPage >= lastPage ? 'pointer-events-none': '' }` } href={ `/page/${currentPage + 1}` }>next</a></li>
 				</ul>
 			</section>
 		</main>
