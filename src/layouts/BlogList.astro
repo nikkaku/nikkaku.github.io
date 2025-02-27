@@ -30,11 +30,11 @@ const { posts, currentPage = 1, lastPage = 1 } = Astro.props
 							<li class="mb-[40px]">
 								{/* <img class={ ` ${ index ? '!rounded-none' : '!mb-0 shrink-0 h-[400px] !w-[600px] object-cover' }` } src={post.data.heroImage} /> */}
 								<div class="m-0 text-left box-border">
-									<h2 class="p-0 mt-0 mx-0 font-bold text-[1.6rem] sm:text-[2rem]">{post.data.title}</h2>
+									<h2 class="p-0 mt-0 mx-0 font-bold text-[1.6rem] sm:text-[2rem] truncate">{post.data.title}</h2>
 									<p class="p-0 m-0 leading-[2] line-clamp-2 text-[#333]">{ post.body }</p>
 									{
 										post.data.tags && (
-											<ul class="flex gap-x-[6px]">
+											<ul class="flex flex-wrap gap-x-[6px]">
 												{post.data.tags.map((item: string) => <li class="text-[#333] text-[14px]">#{item}</li>)}
 											</ul>
 										)

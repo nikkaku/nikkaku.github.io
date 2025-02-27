@@ -44,7 +44,7 @@ const { title, description, pubDate, date, updatedDate, heroImage, tags } = Astr
 						</div>
 						{
 							tags && (
-								<ul class="flex gap-x-[6px]">
+								<ul class="flex flex-wrap gap-x-[6px]">
 									{tags.map((item: string) => <li class="text-[#333] text-[14px]">#{item}</li>)}
 								</ul>
 							)
