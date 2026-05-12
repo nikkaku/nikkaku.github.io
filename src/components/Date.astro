@@ -1,0 +1,13 @@
+---
+type Props = {
+	date: Date
+	update?: Date | undefined
+}
+
+const { date, update } = Astro.props
+---
+
+<div class="post__date">
+  <time datetime={new Date(date).toISOString()}>{ date.toLocaleDateString('en-us', { year: 'numeric', month: 'short', day: 'numeric' }) }</time>
+  {update && <span>, updated <time datetime={new Date(update).toISOString()}>{ update.toLocaleDateString('en-us', { year: 'numeric', month: 'short', day: 'numeric' }) }</time></span>}
+</div>
