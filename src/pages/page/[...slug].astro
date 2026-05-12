@@ -1,0 +1,21 @@
+---
+import { getCollection, type CollectionEntry } from 'astro:content'
+import { COUNT } from 'astro:env/client'
+
+import Layout from '@/layouts/BaseLayout.astro'
+import List from '@/components/List.astro'
+
+export async function getStaticPaths() {
+	const length = Math.ceil((await getCollection('blog')).length / COUNT)
+	const arr = []
+	for (let i = 0; i < length; i++)
+	  if (i) arr.push({ params: { slug: (i + 1).toString() }, props: { index: i } })
+	console.log(arr)
+	return arr
+}
+
+const { index }: { index: number } = Astro.props
+---
+<Layout>
+  <List index = { index }/>
+</Layout>

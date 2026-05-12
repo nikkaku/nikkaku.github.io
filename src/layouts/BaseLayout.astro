@@ -1,0 +1,40 @@
+---
+import '@/styles/global.css'
+import { Image } from 'astro:assets'
+import { TITLE, DESCRIPTION, GITHUB } from 'astro:env/client'
+const { title, description } = Astro.props
+---
+
+<html lang="zh-Hant-TW">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<!-- <link rel="icon" href="/favicon.ico" /> -->
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title ? `${title} :: ${TITLE}` : TITLE}</title>
+		<meta name="description" content={description || DESCRIPTION} />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<header>
+		  <div class="header__container">
+				<a class="header__link" href="/">
+				  <Image width={30} height={30} src="/favicon.svg" alt="" />
+				  <span>{TITLE}</span>
+				</a>
+			</div>
+		</header>
+	  <main class="container">
+      <slot />
+		</main>
+		<footer>
+		  <div class="footer__container">
+  		  <a href={GITHUB} target="_blank">[ GitHub ]</a>
+  		  <span>© 2026 Amuuuuuuuu All rights reserved. </span>
+			</div>
+		</footer>
+	</body>
+</html>
