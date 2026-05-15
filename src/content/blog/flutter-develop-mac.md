@@ -2,9 +2,8 @@
 slug: flutter-develop-mac
 title: flutter 在 mac 上開發
 date: 2024-12-28
-updated:  2024-12-28
 tags: [flutter]
-category: 前端
+category: frontend
 ---
 
 明年開始有部分專案會轉用 flutter 開發並在多平台上發布，稍微順一下環境部署與開發至上線產品的流程~~少走一點歪路~~。

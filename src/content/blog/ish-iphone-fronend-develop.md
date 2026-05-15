@@ -2,9 +2,8 @@
 slug: ish-iphone-fronend-develop
 title: 淺聊 iSH 在 iphone 上進行前端開發
 date: 2024-09-02
-updated:  2024-09-02
 tags: [terminal, ios, ish]
-category: 前端
+category: frontend
 ---
 
 前陣子因為聚會中突然想 coding 驗證看看某個方案是否可行，但電腦又不會隨時帶在身邊，碰巧爬文爬到了一個蠻有吸引力的解決方案 iSH。

@@ -2,9 +2,8 @@
 slug: forwarding-setting-vpn
 title: 透過 Forwarding 設定轉送 VPN
 date: 2025-09-06
+updated:  2026-01-10
 description: 透過 Forwarding 設定轉送 Fortinet VPN
-updated:  2025-09-19
-tags: [vpn]
 category: linux
 ---
 

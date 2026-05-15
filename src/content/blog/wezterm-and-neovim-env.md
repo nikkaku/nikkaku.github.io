@@ -4,7 +4,7 @@ title: wezterm 與 neovim 前端環境設定分享
 date: 2024-08-05
 updated:  2024-09-13
 tags: [terminal]
-category: 前端
+category: frontend
 ---
 
 這篇是關於兩個前端開發過程中，學習 wezterm 與 nvim 的內容紀錄與分享。
