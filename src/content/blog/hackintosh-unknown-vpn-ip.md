@@ -2,8 +2,8 @@
 slug: hackintosh-unknown-vpn-ip
 title: 黑蘋果使用 open vpn 因網路ip未顯示無法連線解決方案
 date: 2018-07-24
-updated: 2018-07-24
 tags: [hackintosh, vpn]
+category: hackintosh
 ---
 
 黑蘋果使用open vpn因網路ip未顯示無法連線解決方案

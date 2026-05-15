@@ -2,8 +2,8 @@
 slug: fenvi-fv-t919-bcm94360cd-wifi-bluetooth
 title: fenvi FV-T919 安裝踩坑紀錄
 date: 2022-05-08
-updated: 2022-05-08
 tags: [fenvi, bcm94360cd, fv-t919, 黑蘋果, hackintosh, wifi, bluetooth]
+category: hackintosh
 ---
 
 悲劇說在前，隔天測試了一下 airpods 發現會連線失敗，原因是晶片先天的體質 😑，之前買了 nuphy air75 才決心入手在黑蘋果免驅藍牙，一開使蠻推的(看下面的文章有多愉悅)，只能說購買前沒好好功課有夠悲劇的。

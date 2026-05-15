@@ -2,9 +2,8 @@
 slug: new-date-get-day
 title: 如何用原生的 new Date() 計算取得固定的日期
 date: 2024-05-11
-updated:  2024-05-11
 tags: [javascript]
-category: 前端
+category: frontend
 ---
 
 很多需求會在固定的日期或範圍內顯示不一樣的內容或效果，

@@ -2,9 +2,8 @@
 slug: vue-3-google-analytics
 title: 在 Vue 3 中使用 Google Analytics
 date: 2022-01-11
-updated:  2022-01-11
 tags: [vue 3, google analytics]
-category: 前端
+category: frontend
 ---
 
 在原本v1站台裏是使用gtm作為ga的資料來源，

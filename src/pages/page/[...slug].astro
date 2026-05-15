@@ -10,7 +10,6 @@ export async function getStaticPaths() {
 	const arr = []
 	for (let i = 0; i < length; i++)
 	  if (i) arr.push({ params: { slug: (i + 1).toString() }, props: { index: i } })
-	console.log(arr)
 	return arr
 }
 

@@ -2,9 +2,8 @@
 slug: javascript-proxy
 title: proxy
 date: 2022-02-24
-updated: 2022-02-24
 tags: [javascript, proxy]
-category: 前端
+category: frontend
 ---
 
 前陣子因緣際會遇到了個狀況

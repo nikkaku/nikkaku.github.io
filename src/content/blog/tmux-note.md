@@ -3,7 +3,6 @@ slug: tmux-note
 title: tmux 快捷筆記
 date: 2025-01-26
 description: 紀錄常用的 tmux 指令與稍微敘述安裝
-updated:  2025-01-26
 tags: [tmux]
 category: linux
 ---

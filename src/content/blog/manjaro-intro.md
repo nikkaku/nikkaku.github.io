@@ -2,8 +2,8 @@
 slug: manjaro-intro
 title: 在manjaro下開發日子(1):入坑前言
 date: 2019-09-02
-updated: 2019-09-02
 tags: [manjaro, linux]
+category: linux
 ---
 
 平常開發跟日常使用mac為主
