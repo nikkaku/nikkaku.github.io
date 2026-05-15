@@ -14,11 +14,17 @@ const length = Math.ceil(posts.length / COUNT)
 const result = []
 for (let i = 0; i < posts.length; i += COUNT)
   result.push(posts.slice(i, i + COUNT))
+
+const chooseResult = result[index]
+
+for (let i = 0; i < chooseResult.length; i++)
+  chooseResult[i].body = chooseResult[i].body?.slice(0, 160)
+
 ---
 
 <section>
   <ul class="post__list">
-    {result[index].map((post) => (
+    {chooseResult.map((post) => (
       <li class="post__item">
         <div class="post__top">
       		<Date date={post.data.date} update={post.data.updated} />
