@@ -3,7 +3,7 @@ slug: swiper-circle-calculates
 title: 實現讓 Swiper 擁有圓弧度滑動的效果
 description: 使用 Swiper 搭配圓形公式實現跟著圓形滑動的效果
 date: 2026-04-20
-updated:  2026-05-14
+updated:  2026-05-26
 category: frontend
 ---
 
@@ -40,7 +40,7 @@ main { width: 300px; height: 300px; margin: 0 auto; overflow: hidden; position: 
 .swiper-slide.swiper-slide-active .slide { width: 80px; }
 ```
 
-這邊就是實現滑動的重點，建議初始 Swiper 的時間放在畫面完成後，因為會需要取得 swiper 布局的寬度，如果是滿版的話也可以直接取用 window.innerWidth，另外如果搭配 loop 效果可以加上 swiper.loopDestroy() 與 swiper.loopCreate() 來設定 loop，接著看到監聽的 progress ，這邊會用上一開始提到的圓形公式算出 y 在 x 的位置下該呈現在什麼位子高低位子，另外預設雖然 slide 本身的 transition 就有針對 transform 作用，但如果沒有的話可以自行增加 slide.style.transitionProperty = 'transform' 增加補間與順暢度，最後監聽的 setTransition 則會影響，放開後的動畫流程，預設參數會非常快的回到對應的位子，使用回傳的速率對於視覺漸變的過程相當大的幫助
+這邊就是實現滑動的重點，建議初始 Swiper 的時間放在畫面完成後，因為會需要取得 swiper 布局的寬度，如果是滿版的話也可以直接取用 window.innerWidth，另外如果搭配 loop 效果可以加上 swiper.loopDestroy() 與 swiper.loopCreate() 來設定 loop，接著看到監聽的 progress ，這邊會用上一開始提到的圓形公式算出 y 在 x 的位置下該呈現在什麼位子高低位子，另外預設雖然 slide 本身的 transition 就有針對 transform 作用，但如果沒有的話可以自行增加 slide.style.transitionProperty = 'transform' 增加補間與順暢度，最後監聽的 setTransition 則會影響，放開後的動畫流程，預設參數會非常快的回到對應的位子，使用回傳的速率對於視覺漸變的過程非常有幫助
 
 ```javascript
 let slideWidth = 0
@@ -74,4 +74,4 @@ swiper.on('setTransition', function(swiper, transition) {
 swiper.init()
 ```
 
-至此大致上的流程就完成差不多了，只能說小時候不讀書長大忘光光，如果對各種公式有記憶有熟悉，肯定能對畫面的互動性增加很多趣味，這次光收集資料與問 AI 花了點時間，最後所呈現效果讓我感到非常滿足，稍微有點想法要去惡補基本公式= ="，另外 Swiper 也補齊了很多以前的痛點，例如 loop 初始化偶爾會缺少往後滑動的區塊導致 ux 體感上不適，還有 controller 可以一次同步複數 Swiper 滑動操作 ，如果後續接觸到更多，再開一篇來紀錄一下這有趣的套件。
+至此大致上的流程就完成差不多了，只能說小時候不讀書長大忘光光，如果對各種公式有記憶有熟悉，肯定能對畫面的互動性增加很多趣味，這次收集資料花了點時間，最後所呈現效果讓我感到非常滿足，稍微有點想法要去惡補基本公式，另外 Swiper 也補齊了很多以前的 bug ，例如 loop 初始化偶爾會缺少往後滑動的區塊導致 ux 體感上不適，還有 controller 可以一次同步複數 Swiper 滑動操作 ，如果後續接觸到更多，再開一篇來紀錄一下這有趣的套件。
