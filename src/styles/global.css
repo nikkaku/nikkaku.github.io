@@ -199,3 +199,11 @@ footer {
 .non-page__sub {
   font-size: 20px;
 }
+
+/*@view-transition {
+  navigation: auto;
+}
+
+::view-transition-group(root) {
+  animation-duration: 0.2s;
+}*/

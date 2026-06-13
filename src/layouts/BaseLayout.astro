@@ -2,7 +2,7 @@
 import '@/styles/global.css'
 import { Image } from 'astro:assets'
 import { TITLE, DESCRIPTION, GITHUB } from 'astro:env/client'
-const { title, description } = Astro.props
+const { id, title, description } = Astro.props
 ---
 
 <html lang="zh-Hant-TW">
@@ -27,7 +27,7 @@ const { title, description } = Astro.props
 				</a>
 			</div>
 		</header>
-	  <main class="container">
+	  <main class="container" style={id ? `view-transition-name:${id};` : ''}>
       <slot />
 		</main>
 		<footer>
