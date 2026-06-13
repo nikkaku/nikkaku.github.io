@@ -200,11 +200,16 @@ footer {
   font-size: 20px;
 }
 
-@view-transition {
-  navigation: auto;
-}
+@media (prefers-reduced-motion: no-preference) {
+  @view-transition {
+    navigation: auto;
+  }
 
-/*::view-transition-group(*) {
-  animation-duration: 0.5s;
-  animation-timing-function: ease;
-}*/
+  ::view-transition-group(*),
+  ::view-transition-old(*),
+  ::view-transition-new(*) {
+    animation-duration: 0.7s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+  }
+}

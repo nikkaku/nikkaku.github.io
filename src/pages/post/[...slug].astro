@@ -15,7 +15,7 @@ const post = Astro.props
 const { Content } = await render(post)
 ---
 
-<Layout title={post.data.title} description={post.data.description} style={`view-transition-name:${post.id};`}>
+<Layout title={post.data.title} description={post.data.description}>
   <div class="post__top">
     <Date date={post.data.date} update={post.data.updated} />
     <h1 class="post__title">{post.data.title}</h1>
