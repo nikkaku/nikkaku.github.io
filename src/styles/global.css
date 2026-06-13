@@ -208,7 +208,7 @@ footer {
   ::view-transition-group(*),
   ::view-transition-old(*),
   ::view-transition-new(*) {
-    animation-duration: 0.7s;
+    animation-duration: 0.5s;
     animation-fill-mode: forwards;
     animation-timing-function: ease-out;
   }
