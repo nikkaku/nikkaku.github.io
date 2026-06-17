@@ -3,7 +3,7 @@ slug: swiper-circle-calculates
 title: 實現讓 Swiper 擁有圓弧度滑動的效果
 description: 使用 Swiper 搭配圓形公式實現跟著圓形滑動的效果
 date: 2026-04-20
-updated:  2026-05-26
+updated: 2026-05-26
 category: frontend
 ---
 
